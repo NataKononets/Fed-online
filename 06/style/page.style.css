@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+.container-blok{
+    box-sizing: content-blok;
+    background-color: yellow;
+    width: 800px;
+    padding: 50px 100px;
+    /* padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 400px;
+    padding-left: 200px; */
+ margin: 200px auto;
+    /* margin-top: 100px;
+    margin-bottom: 200px;
+    margin-right: 100px;
+    margin-left: 100px; */
+    text-align: center;
+    border-radius: 10%;
+}
+.container-blok-content{
+    font-size: 0;
+}
+.item{
+    display: inline-block;
+  width: 100px;  
+  height: 100px;
+  background-color: red;
+  margin: 20px;
+  font-size: 20px;
+}

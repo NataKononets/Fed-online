@@ -1,0 +1,45 @@
+*{
+  text-decoration: underline;  
+}
+/* h3{
+      color: rgb(255, 0, 0);
+   background-color: black;
+} */
+
+p{
+   background-color: yellow;
+}
+h3,
+h4{
+      color: rgb(255, 0, 0);
+   background-color: black;
+}
+/*DRV*/
+h3,
+h4{
+      color: orange;
+   background-color: black;
+}
+/*DRV*/
+span{
+    color: blueviolet;
+}
+p span{
+    color: rgb(219, 239, 219);
+}
+header nav a{
+    background-color: yellow;
+}
+.box {
+  border: 2px solid green;
+  background-color: beige;
+  font-family: monospace;
+  font-size: 20px;
+  & > a {
+    color: green;
+    &:hover {
+      color: white;
+      background-color: salmon;
+    }
+  }
+}
