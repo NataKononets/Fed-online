@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.container{
+width: 400px;
+padding: 50px;
+background-color: lawngreen;
+text-align: center;
+margin: 100px auto;
+text-transform: uppercase;
+line-height: 2;
+}
