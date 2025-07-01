@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #f5f5f5;
+    height: 100vh;
+    position: relative;
+}
+.diya {
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    
+}
+.one {
+    background: #000000;
+    top: 0;
+    left: 0;
+}
+
+.center-img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    max-height: 60%;
+}
+.flag {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+}
+.flag::before,
+.flag::after {
+    content: "";
+    flex: 1;
+    width: 100%;
+}
+.flag::before {
+    background: #ffeb3b;
+}
+.flag::after {
+    background: #2196f3; 
+}
+.two{
+    background: #FFCE22;
+   top: 450px;
+    left: 450px;
+    z-index: 2;
+    position: relative;
+}
+.two .blue-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 512px;
+    height: 271.5px;
+    background-color: #2137FC;
+}
+.two .center-image {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+.three {
+    background: #C4C4C4;
+    top: 375px;
+    left: 900px;
+    position: relative;
+
+}
+.three .yellow-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 444px;
+    height: 444px;
+    transform: translate(-50%, -50%);
+    background: #FFCE22;
+    border-radius: 50%;
+    border: 2px solid #2137FC;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.three .circle-shape {
+    position: absolute;
+   width: 444px;
+height: 233.5px;
+top: 34px;
+left: 34px;
+}
+.three .circle-icon {
+    position: absolute;
+    top: 249.86px; 
+    left: 77.26px;
+    width: 358.44px;
+    height: 203.74px;
+    
+}
