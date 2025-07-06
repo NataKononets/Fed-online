@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 161, 198, 0.05);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.background {
+  width: 1920px;
+  height: 960px;
+  margin: 0 auto;
+}
+
+h1.title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 80px;
+  letter-spacing: -0.5px;
+  color: #2D3640;
+  opacity: 1;
+  margin-top: 142px;
+  margin-left: 350px;
+}
+h1.title .bold {
+  font-weight: 600;
+}
+h2.subtitle {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: #2B292D;
+  width: 695px;
+  height: 80px;
+  opacity: 1;
+  margin-top: 50px; 
+  margin-left: 350px;
+}
+.container {
+  width: 1270px;
+  margin: 62px 0 0 350px;
+  overflow: hidden;
+}
+
+.card {
+  float: left;
+  width: 295px;
+  height: 470px;
+  margin-right: 30px;
+  background: white;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  opacity: 1;
+  position: relative;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card .photo {
+  width: 120px;
+  height: 120px;
+  margin: 56px auto 0 auto; 
+}
+
+.card .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 1;
+}
+.card .name {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px; 
+  letter-spacing: -0.63px;
+  color: #2D3640;
+  width: 102px;
+  height: 33px;
+  margin: 34px auto 0 auto;
+  text-align: center;
+}
+.card .title {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #4B4F52;
+  width: 111px;
+  height: 26px;
+  margin: 13px auto 0 auto; 
+  text-align: center;
+}
+.card .logo {
+  margin: 34px auto 0 auto;
+  display: flex;
+  justify-self: center;
+  gap: 10px;
+}
+.card .logo img {
+   object-fit: cover;
+  border-radius: 50%;
+  opacity: 1;
+  flex-shrink: 0;
+}
