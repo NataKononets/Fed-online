@@ -111,3 +111,22 @@ h2.subtitle {
   opacity: 1;
   flex-shrink: 0;
 }
+.video {
+  position: absolute;
+  top: 690px;
+  left: 695px;
+  width: 85px;
+  height: 85px;
+  background: #F2994A;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3F9AB7;
+  inline-size: 5;
+}
+.video-play {
+  width: 36px;
+  height: 32px;
+  transform: rotate(-90deg);
+}
