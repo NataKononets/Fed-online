@@ -9,15 +9,12 @@ body,html{
     color: white;
     padding-bottom: 200px;
 }
-.hero{
+body{
     background-image: url(../img/Rectangle\ 1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;   
+  
 }
 .container{
     max-width: 1615px;
@@ -82,29 +79,6 @@ body,html{
   padding: 5px;
   width: 150px;
 }
-
-.search-box {
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  padding: 5px 10px;
-  margin-left: auto;
-  margin-right: 20px;
-}
-
-.search-input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px;
-  padding: 5px;
-  width: 150px;
-}
-
 .search-button {
   color: white;
   border: none;
@@ -238,11 +212,6 @@ body,html{
   gap: 10px;
 }
 .nav-buttons button {
- position: absolute; 
-    top: 10%;
-    left: 83%; 
-    transform: translateY(-50%);
-     z-index: 2;
     background-color: rgba(0,0,0,0.6);
     color: white;
     font-size: 24px; 
@@ -272,7 +241,7 @@ body,html{
 .age-box {
    display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     right: 40px;
     background-color: #ffffff7d;
@@ -280,6 +249,7 @@ body,html{
     height: 66px;
     border-radius: 4px;
     padding-left: 10px;
+    z-index: 10;
 }
 .age-box .bar {
   background: #D40D1F;
