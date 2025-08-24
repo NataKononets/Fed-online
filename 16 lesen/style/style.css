@@ -58,6 +58,11 @@ body{
   cursor: pointer;
 }
 
+.search-wrapper{
+  position:relative;
+  display: flex;
+  align-items: center;
+}
 .search-box {
   display: flex;
   align-items: center;
@@ -65,8 +70,10 @@ body{
   border: 1px solid #ccc;
   border-radius: 30px;
   padding: 5px 10px;
-  margin-left: auto;
-  margin-right: 20px;
+ transform: width 0.3s ease;
+ width: 40px;
+ overflow: hidden;
+ white-space: nowrap;
 }
 
 .search-input {
@@ -78,7 +85,15 @@ body{
   font-size: 16px;
   padding: 5px;
   width: 150px;
+  transition: opacity 0.3s ease; 
+  opacity: 0;
 }
+ .search-wrapper:hover .search-box, .search-input:focus {
+   width: 180px; 
+  } 
+ .search-wrapper:hover .search-input, .search-input:focus {
+   opacity: 1;
+   }
 .search-button {
   color: white;
   border: none;
@@ -90,12 +105,17 @@ body{
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .avatar {
   width: 74px;
   height: 74px;
+}
+.hero {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .description {
   color: white;
@@ -221,7 +241,16 @@ body{
     height: 40px;
     cursor: pointer;
      }
-
+.nav-buttons { display: flex;
+   gap: 10px; 
+   opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s ease;
+   }
+   .bottom-header:hover .nav-buttons {
+   opacity: 1;
+    pointer-events: auto;
+   } 
 .nav-buttons button:active {
   background: #C8C8C8;
   color: white;
@@ -243,12 +272,9 @@ body{
     align-items: center;
     position: fixed;
     bottom: 40px;
-    right: 40px;
     background-color: #ffffff7d;
     width: 174px;
     height: 66px;
-    border-radius: 4px;
-    padding-left: 10px;
     z-index: 10;
 }
 .age-box .bar {
@@ -262,5 +288,55 @@ body{
     font-weight: 500;
     margin-left: 20px;
     font-family: 'Inter', sans-serif;
- 
 }
+@media (max-width: 768px){
+  .hero{
+padding: 40px 15px;
+  }
+  .title{
+    font-size: 32px;
+  }
+  .description{
+    font-size: 14px;
+    }
+  
+    .buttons button{
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+    .logo img{
+      width: 120px;
+    }
+  }
+ @media (max-width: 480px) { 
+  .title { 
+    font-size: 24px; 
+  } 
+  .description { 
+    font-size: 14px; 
+  }
+   .buttons button {
+     display: block;
+      width: 100%; 
+      margin-bottom: 10px; } 
+    } 
+     @media (min-width: 1200px) {
+     .content {
+       max-width: 800px; 
+       margin-left: auto; 
+        margin-right: auto;
+       } 
+       .title { 
+        font-size: 64px; 
+      } 
+      .description { 
+        font-size: 24px; 
+      } 
+      .buttons button { 
+        font-size: 18px;
+         padding: 16px 32px;
+         } 
+         .logo img { 
+          width: 200px; 
+        } 
+      }

@@ -4,8 +4,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+    <header class="top-bar">
+       <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <div class="logo">
+        Shoppy
+      </div>
+     
+      
+     <nav class="menu">
+      <a href="#">Women</a>
+      <a href="#">Men</a>
+      <a href="#">Kids</a>
+      <a href="#">Accessories</a>
+      <a href="#">Sales</a>
+      <a href="#">Shoppy</a>
+    </nav>  
+     <div class="left-icons">
+      <i class="fas fa-search" id="search-toggle"></i>
+      <input type="text" id="search-input" placeholder="Поиск..." />
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('search-toggle');
+    const input = document.getElementById('search-input');
+
+    toggleBtn.addEventListener('click', () => {
+      input.classList.toggle('active');
+      if (input.classList.contains('active')) {
+        input.focus();
+      }
+    });   
+  </script>
+  <div class="sneakers">
+    <img src="img/Vector2.svg" alt="sneaker"class="sneaker-svg">
+    <img src="img/Vector2.svg" alt="sneakersecond" class="sneaker second">
+</div>
+  <h1 class="main-title"> 
+    Build for flight
+  </h1>
+  <p class="sub-text">
+    Introducing product name. Our lightest shoe ever.
+  </p>
+  <button class="shop-button">SHOP NOW</button>
+  
+<div class="shoe-section">
+  <div class="shoe-card">
+    <img src="img/Rectangle 9.png" alt="Women Shoes">
+    <h2 class="title">Women</h2>
+    <p class="shop-now">Shop now</p>
+  </div>
+  <div class="shoe-card">
+    <img src="img/Rectangle 10.png" alt="Men Shoes">
+    <h2 class="title">Men</h2>
+    <p class="shop-now">Shop now</p>
+  </div>
+</div>
+<section class="frame3">
+   <h2 class="title">New Releases</h2>
+  <div class="products">
+    <div class="product">
+      <img src="img/Rectangle 17.png" alt="Product 1">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 19.png" alt="Product 2">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 20.png" alt="Product 3">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 21.png" alt="Product 4">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 22.png" alt="Product 5">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+  </div>
+   <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+</section>
+<section class="frame4">
+   <h2 class="title">Top Kicks</h2>
+  <div class="products">
+    <div class="product">
+      <img src="img/Rectangle 23.png" alt="Product 6">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 24.png" alt="Product 6">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 25.png" alt="Product 8">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 26.png" alt="Product 9">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+    <div class="product">
+      <img src="img/Rectangle 27.png" alt="Product 10">
+      <p class="product-name">Product name<br><span>$299 USD</span></p>
+    </div>
+  </div>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+</section>
+<section class="mailing-section">
+    <h2>Never miss a drop.</h2>
+    <p>Receive updates about our new products and promotion.</p>
+    <button class="cta-button">Join Mailing List</button>
+  </section>
+  <section class="black-blok">
+    <div class="footer-content">
+      <div class="footer-column">
+<h4 class="Footer-title">
+  MY ACCOUNT
+</h4>
+  <a href="#">Sign in</a>
+  <a href="#">Register</a>
+  <a href="#">Order status</a>
+</div>
+    <div class="footer-column">
+<h4 class="Footer-title">
+  HELP
+</h4>
+  <a href="#">Shipping
+
+</a>
+  <a href="#">Returns</a>
+  <a href="#">Sizings</a>
+</div>   
+ <div class="footer-column">
+<h4 class="Footer-title">
+ ABOUT
+</h4>
+  <a href="#">Our story
+
+</a>
+  <a href="#">Media </a>
+  <a href="#">Sustainability</a>
+</div>
+    <div class="footer-column">
+<h4 class="Footer-title">
+  LEGAL STUFF
+</h4>
+  <a href="#">Terms of use
+</a>
+  <a href="#">Terms of sales</a>
+  <a href="#">Privacy policy</a>
+</div>
+    <div class="footer-column">
+<h4 class="Footer-title">
+    FOLLOW US
+</h4>
+<div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+  </div>
+</div>
+</div>
+<p class="footer-copy"> 2020 Shoppy Inc. All Right Reserved</p>
+  </section>
 </body>
 </html>
