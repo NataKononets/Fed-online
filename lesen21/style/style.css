@@ -29,7 +29,7 @@ body {
     font-size: 21px;
     display: inline-flex;         
     align-items: center;
-    margin-bottom: 180px;          /* подгоняем расстояние до подзаголовка */
+    margin-bottom: 180px;     
 }
 
 .triangle-hero {
@@ -42,28 +42,25 @@ body {
     vertical-align: middle;
 }
 
-/* Подзаголовок PARTNER WITH KONSTUCT */
 .hero-subtitle {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-size: 60px;
     letter-spacing: 5.71px;
     line-height: 1;
-    margin-bottom: 20px;           /* расстояние до описания */
+    margin-bottom: 20px;           
     text-align: center;
 }
 
-/* Описание */
 .hero-description {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 1;
     text-align: center;
-    margin-bottom: 150px;          /* расстояние до SCROLL DOWN */
+    margin-bottom: 150px;   
 }
 
-/* SCROLL DOWN */
 .scroll-down {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -73,13 +70,12 @@ body {
 }    
     .menu {
     display: grid;
-    grid-template-columns: 200px 1fr; /* лого + навигация */
+    grid-template-columns: 200px 1fr; 
     align-items: center;
-    padding: 24px 50px; /* верхний отступ и боковой */
-    background-color: #fff; /* или прозрачный */
-}
+    padding: 24px 50px; 
+    background-color: #fff; 
+    }
 
-/* Лого */
 .logo-title {
     font-family: 'KONSTRU-font', sans-serif;
     font-weight: 400;
@@ -89,23 +85,21 @@ body {
     align-items: center;
 }
 
-/* Треугольник между U и T */
 .triangle-logo{
     display: inline-block;
     width: 6.55px;
     height: 16.36px;
     background-color: #00A4E5;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
-    margin: 0 4px; /* отступ слева и справа */
+    margin: 0 4px; 
     vertical-align: middle;
 }
 
-/* Навигация */
 .nav {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    justify-content: end; /* выравнивание по правому краю */
-    gap: 30px; /* расстояние между пунктами меню */
+    justify-content: end; 
+    gap: 30px;
 }
 
 .nav a {
@@ -124,12 +118,11 @@ body {
     color: #00A4E5;
     font-weight: 700;
 }
-/* Скрываем чекбокс */
+
 #menu-toggle {
   display: none;
 }
 
-/* Гамбургер */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -137,7 +130,6 @@ body {
   color: #171819;
 }
 
-/* Мобильное меню */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -164,56 +156,52 @@ body {
 }
 .our-story {
   display: flex;
-  justify-content: center;   /* центрируем */
+  justify-content: center;  
   align-items: center;
   flex-direction: column;
-  margin: 80px 0;            /* отступы сверху и снизу */
+  margin: 80px 0;  
 }
 
 .our-story__title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 18px;           /* размер текста */
+  font-size: 18px;  
   line-height: 100%;
-  letter-spacing: 2.31px;    /* межбуквенный интервал */
+  letter-spacing: 2.31px; 
   text-align: center;
   color: #000;
   position: relative;
   display: inline-block;
-  padding-bottom: 12px;      /* место для линии */
+  padding-bottom: 12px; 
 }
 
-/* Псевдоэлемент — линия */
 .our-story__title::after {
   content: "";
   position: absolute;
-  bottom: 0;                 /* под текстом */
+  bottom: 0;  
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;               /* ширина линии */
-  height: 2px;               /* толщина линии */
-  background-color: #00A4E5; /* цвет */
+  width: 50px; 
+  height: 2px; 
+  background-color: #00A4E5; 
 }
   .container {
-  max-width: 1140px; /* регулируй по макету */
+  max-width: 1140px; 
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Секция */
 .story-grid {
   padding: 80px 0;
 }
 
-/* Сетка */
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr; /* текст широкий + 3 равные */
+  grid-template-columns: 2fr 1fr 1fr 1fr; 
   gap: 20px;
   align-items: start;
 }
 
-/* Левая часть (текст) */
 .grid-text {
   grid-column: 1 / span 1;
 }
@@ -235,7 +223,6 @@ body {
   color: #333;
 }
 
-/* Карточки */
 .grid-card {
   position: relative;
   height: 224px;
@@ -252,55 +239,52 @@ body {
   color: #fff;
 }
 
-.plan   { background-image: url('../img/Bitmap\ \(1\).png'); }
-.manage { background-image: url('../img/Bitmap\ \(2\).png'); }
-.build  { background-image: url('../img/Bitmap.png'); }
+.plan   { background-image: url("../img/Bitmap\ \(1\).png"); }
+.manage { background-image: url("../img/Bitmap\ \(2\).png"); }
+.build  { background-image: url("../img/Bitmap.png"); }
 
 
 .capabilities{
   padding: 60px 0;
 }
 .cap-wrap{
-  max-width: 1140px;       /* под направляющие */
+  max-width: 1140px;      
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;               /* расстояние между элементами */
+  gap: 24px;         
 }
 
-/* заголовок с линией */
 .cap-title{
   position: relative;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 2.3px;
-  color: #3a3f44;          /* тёмно-серый как на макете */
-  white-space: nowrap;     /* чтоб не переносился */
-  padding-bottom: 12px;    /* место под линию */
+  color: #3a3f44;     
+  white-space: nowrap;   
+  padding-bottom: 12px;  
 }
 .cap-title::after{
   content:"";
   position:absolute;
   left:0;
   bottom:0;
-  width: 52px;             /* линия под буквой O — как в макете ~50px */
+  width: 52px;             
   height: 3px;
   background:#00A4E5;
 }
 
-/* текст посередине */
 .cap-text{
-  flex: 1 1 520px;         /* тянется, но имеет базовую ширину */
+  flex: 1 1 520px;       
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.7;
   color:#6c747c;
 }
 
-/* кнопка справа */
 .cap-btn{
   flex: 0 0 auto;
   display:inline-block;
@@ -454,14 +438,17 @@ body {
 }
 .newsletter-form{
   display:grid;
+  grid-template-columns: 1fr 160px;
   background:#fff;
   border-radius:2px;
   overflow:hidden;
 }
 .newsletter-form input{
   padding:12px 14px;
-  border:0; outline:0;
-  font-size:14px; color:#333;
+  border:0; 
+  outline:0;
+  font-size:14px; 
+  color:#333;
 }
 .newsletter-form button{
   border:0; cursor:pointer;
@@ -542,7 +529,6 @@ body {
    color:#00A4E5; 
   }
 
-
 .footer-bottom{
   text-align:center; 
   margin-top:40px; 
@@ -568,10 +554,6 @@ body {
         grid-template-columns: auto auto 1fr; 
         align-items: center;
         padding: 20px 30px;
-    }
-
-    .nav {
-        display: none; 
     }
 
     .hamburger {
@@ -647,7 +629,7 @@ body {
   .cta-title { 
     font-size: 26px; 
   }
-    .footer-inner {
+    .footer-grid {
     grid-template-columns: repeat(3, 1fr);
   }
     .newsletter-grid{ 
