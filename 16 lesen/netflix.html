@@ -10,89 +10,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-<section class="hero">   
-<div class="container">
-<header class="header">
-    <img src="img/netflix-logo-png-2562 1.png" alt="neflix">
-       <div class="separator"></div>
-    <span class="date-picker">
-Friday July 8th
-    </span>
-    <form class="search-wrapper" action="#" method="get">
-      <div class="search-box"></div>
-      <input type="text" placeholder="Search..." name="q" class="search-input">
-      <button type="submit" class="search-button">
-   <i class="fas fa-search"></i>
-      </button>
-    </form>
-    <img src="img/Ellipse 2.png" alt="User Avatar" class="avatar">
-</header>
+  <section class="hero">
+    <div class="container">
+      <header class="header">
+        <div class="header-left">
+          <img class="logo" src="img/netflix-logo-png-2562 1.png" alt="Netflix">
+          <div class="separator"></div>
+          <span class="date-text">Friday July 8th</span>
+        </div>
 
-<section class="description">
-  <div class="genres">
-    <span>Drama</span>
-    <div class="divider"></div>
-    <span>Thriller</span>
-    <div class="divider"></div>
-    <span>Supernatural</span>
-  </div>
+        <div class="header-right">
+          <form class="search" action="#" method="get">
+            <input class="search-input" type="text" name="q" placeholder="Search...">
+            <button class="search-button" type="submit" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <img class="avatar" src="img/Ellipse 2.png" alt="User avatar">
+        </div>
+      </header>
 
-  <h1 class="title">Stranger Things</h1>
+      <section class="description">
+        <div class="genres">
+          <span>
+            Drama
+          </span>
+          <div class="divider">
 
-  <div class="info">
-    <span>2019</span>
-    <div class="divider"></div>
-    <span>DIRECTOR: Shawn Levy</span>
-    <div class="divider"></div>
-    <span>Seasons: 3 (5 Episodes)</span>
-  </div>
+          </div>
+          <span>Thriller</span>
+          <div class="divider"></div>
+          <span>Supernatural</span>
+        </div>
+        <h1 class="title">Stranger Things</h1>
 
-  <p class="description-text">
-    A chilling supernatural thriller set in a small town where a group of kids uncover dark government secrets and face terrifying creatures from another dimension.
-  </p>
+        <div class="info">
+          <span>2019</span>
+          <div class="divider"></div>
+          <span>DIRECTOR: Shawn Levy</span>
+          <div class="divider"></div>
+          <span>Seasons: 3 (5 Episodes)</span>
+        </div>
 
-  <div class="rating">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="far fa-star"></i>
-    <i class="far fa-star"></i>
-  </div>
+        <p class="description-text">
+          In a 1980s Indiana town, a group of friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.
+        </p>
 
-  <div class="buttons">
-    <button class="stream-now">
-       STREAM NOW
-     <i class="fas fa-play"></i>
-    </button>
-    <button class="all-episodes">
-      ALL EPISODES
-    </button>
-  </div>
-</section>
-<section class="bottom-section">
-  <div class="bottom-header">
-    <h2>POPULAR THIS WEEK</h2>
-    <div class="nav-buttons">
-      <button>&lt;</button>
-      <button>&gt;</button>
+        <div class="rating" aria-label="rating 3 of 5">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+
+        <div class="buttons">
+          <button class="stream-now">
+            STREAM NOW <i class="fas fa-play"></i>
+          </button>
+          <button class="all-episodes">ALL EPISODES</button>
+        </div>
+      </section>
+
+      <section class="bottom-section">
+        <div class="bottom-header">
+          <h2>POPULAR THIS WEEK</h2>
+          <div class="nav-buttons">
+            <button class="nav-prev" aria-label="Previous">&lt;</button>
+            <button class="nav-next" aria-label="Next">&gt;
+              </button>
+          </div>
+        </div>
+
+        <div class="image-row">
+          <img src="img/Rectangle 6.png" alt="">
+          <img src="img/Rectangle 7.png" alt="">
+          <img src="img/Rectangle 8.png" alt="">
+          <img src="img/Rectangle 9.png" alt="">
+          <img src="img/Rectangle 11.png" alt="">
+        </div>
+
+        <div class="age-box">
+          <div class="bar"></div>
+          <div class="age-text">16+</div>
+        </div>
+      </section>
     </div>
-  </div>
-
-  <div class="image-row">
-    <img src="img/Rectangle 1.png" alt="">
-    <img src="img/Rectangle 7.png" alt="">
-    <img src="img/Rectangle 8.png" alt="">
-    <img src="img/Rectangle 9.png" alt="">
-    <img src="img/Rectangle 11.png" alt="">
-  </div>
-
-  <div class="age-box">
-    <div class="bar"></div>
-    <div class="age-text">16+</div>
-  </div>
-</section>
-</div>
-</section>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>    
+  </section> 
     </body>
 </html>
