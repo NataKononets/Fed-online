@@ -13,9 +13,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 46px;
-  padding-left: 26px;
-  padding-right: 26px;
+  padding: 46px 26px;
+}
+.logo { 
+  font-weight:800; 
+  font-family:'Montserrat', sans-serif; 
 }
 
 .left-icons {
@@ -74,13 +76,14 @@ body {
   text-align: center;
   text-decoration: none;
   color: gray;
-  transition: color 0.3s ease;
 }
 
 .menu a:hover {
   color: black;
 }
-
+.hero {
+  position: relative;
+}
 .main-title {
   position: absolute;
   top: 344px;
@@ -95,6 +98,7 @@ body {
   opacity: 1;
   margin: 0;
 }
+
 .sub-text {
   position: absolute;
   top: 480px;
@@ -137,6 +141,7 @@ body {
 .shop-button:hover {
   background-color: #333333;
 }
+
 .sneakers{
   position: relative;
   width: 100%;
@@ -362,10 +367,11 @@ body {
  .black-blok {
   width: 100%;
   height: auto;
+  min-height: 285px;
   margin-top: 161px;
   background-color: #000000;
   position: relative;
-  padding: 20px;
+  padding: 40px 20px;
   align-items: flex-start;
 
  }
@@ -375,14 +381,15 @@ body {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
  }
  .footer-column{
   flex: 1; 
-  min-width: 150px;
+  min-width: 180px;
   top: 24px;
   left: 24px;
   color: #C4C4C4;
-font-family: 'Poppins' sans-serif;
+font-family: 'Poppins', sans-serif;
 font-weight: 500;
 font-size: 14px;
 line-height: 25px;
@@ -416,112 +423,6 @@ margin-bottom: 6px;
   color: #ffffff;
   opacity: 0.4;  
   margin-top: 64px;
-}
-
-/* Адаптация под мобильный экран до 480px */
-@media (max-width: 480px) {
-  .top-bar {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  .menu {
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-  }
-  .left-icons {
-    margin-top: 10px;
-  }
-  #search-input {
-    width: 100%;
-  }
-
-  .main-title {
-    position: static;
-    font-size: 32px;
-    line-height: 36px;
-    margin-top: 20px;
-    text-align: center;
-  }
-  .sub-text {
-    position: static;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    margin: 10px 20px;
-  }
-  .shop-button {
-    position: static;
-    width: 80%;
-    margin: 10px auto;
-    display: block;
-    font-size: 16px;
-  }
-
-  .sneakers {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  .sneaker-svg, .sneaker.second {
-    position: static;
-    width: 45%;
-    height: auto;
-    transform: none;
-  }
-
-  .shoe-section {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  .shoe-card {
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .products {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .product {
-    width: 90%;
-  }
-  .product img {
-    width: 100%;
-    height: auto;
-  }
-
-  .mailing-section h2 {
-    font-size: 24px;
-  }
-  .mailing-section p {
-    font-size: 14px;
-  }
-  .cta-button {
-    width: 70%;
-    font-size: 14px;
-    line-height: 40px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  .social-icons {
-    justify-content: center;
-  }
-  .footer-copy {
-    font-size: 10px;
-    line-height: 18px;
-    margin-top: 20px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -566,8 +467,15 @@ margin-bottom: 6px;
 
   nav.menu {
     display: none;
+    position:absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 12px;
+    border-top: 1px;
   }
-   
+
   .sneakers {
     display: flex;
     justify-content: center;
@@ -625,25 +533,25 @@ content: url(../img/Frame\ 1.png);
 .frame4{
   content: url(../img/Frame\ 2.png);
 }
-   .black-block {
+   .black-blok {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 10px; 
-    padding: 15px;
+    padding: 28px 14px;
     text-align: center;
   }
 
-  .black-block h2 {
+  .black-blok h2 {
     font-size: 16px;
   }
 
-  .black-block p {
+  .black-blok p {
     font-size: 12px; 
     line-height: 1.4;
   }
 
-  .black-block a, 
-  .black-block button {
+  .black-blok a, 
+  .black-blok button {
     font-size: 12px;
     padding: 6px 10px;
   }

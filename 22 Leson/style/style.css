@@ -1,0 +1,451 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #e9f7ff;
+  font-family: Arial, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.container { 
+  width: min(1100px, 92vw); 
+  text-align: center; 
+margin: 0 auto;
+display: grid;
+gap: 40px;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+justify-items: center;
+}
+
+h1 {
+  grid-column: 1/-1;
+  color: #00aaff;
+   font-size: 24px;
+    margin-bottom: 24px; }
+
+.btn {
+  background: transparent;
+  border: 2px solid #00aaff;
+  color: #00aaff;
+  padding: 12px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;  
+  border-radius: 6px;
+  min-height: 56px;
+  width: 100%;
+  transition: transform .3s ease, color .3s ease, box-shadow .3s ease;
+}
+
+.btn:focus-visible { 
+  outline: 2px dashed #39c7ff;
+   outline-offset: 3px; }
+
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#00aaff;
+  transform: scaleX(0);
+  transition: transform .5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.fill-in:hover{
+  color:#ffffff;
+  background: #39c7ff;
+}
+.fill-up::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#00aaff;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 1s ease; 
+}
+.fill-up:hover::before{ transform: scaleY(1); }
+.fill-up:hover{ color:#ffffff; }
+
+.slide::before{
+  transform-origin: right; 
+}
+.slide:hover::before{
+  transform: scaleX(1);
+}
+.slide:hover{
+    color: #ffffff;      
+    }
+.notify{
+  background:#00aaff; 
+  border-color:#00aaff;
+  color:#ffffff;
+  overflow: hidden;
+}
+.notify::before{ display:none; }
+
+
+.notify span{
+  display:block;
+  transition: transform 0.35s ease, opacity .35s ease;
+  pointer-events:none;
+}
+.notify .default-text{
+  position:relative;
+  transform: translateY(0);
+  opacity:1;
+}
+.notify .hover-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%) translateY(16px);
+  opacity:0;
+}
+
+.notify:hover .default-text{
+  transform: translateY(-16px);
+  opacity:0;
+}
+.notify:hover .hover-text{
+  transform: translate(-50%, -50%) translateY(0);
+  opacity:1;
+}
+
+.offset {
+  color: #00aaff;  
+  background: transparent;   
+  border: 2px solid #00aaff;  
+  position: relative;
+  overflow: visible;  
+  z-index: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.offset::after {
+  content: "";
+  position: absolute;
+  top: -0.5px;                       
+  left: -0.5px;
+  right: -0.5px;
+  bottom: -0.5px;
+  border: 2px solid #00aaff;      
+  pointer-events: none;             
+  z-index: 1;
+  border-radius: 6px;  
+}
+
+.offset:hover {
+  background: #00aaff;
+  color: #ffffff;
+}
+.glowing {
+  color: #00aaff;               
+  background: transparent;        
+  border: 2px solid #00aaff;      
+  position: relative;
+  transition: none;               
+  box-shadow: none;      
+}
+
+
+.glowing:hover {
+  color: #00aaff;                 
+  background: transparent;
+  animation: glow-pulse 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow:
+      0 0 6px 0 #00aaff,
+      0 0 12px 0 rgba(0,170,255,0.7);
+  }
+  100% {
+    box-shadow:
+      0 0 14px 2px #00aaff,
+      0 0 28px 4px rgba(0,170,255,0.6),
+      0 0 42px 8px rgba(0,170,255,0.4);
+  }
+}
+.raise{
+  position: relative;
+  will-change: transform; 
+  transition: transform .35s ease;
+}
+
+.raise::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-18px;   
+  height:20px;
+  background: radial-gradient(ellipse at center,
+              rgba(0,170,255,.9) 0%,
+              rgba(0,170,255,.5) 60%,
+              rgba(0,170,255,0) 90%);
+  filter: blur(10px);
+  opacity:0;
+  transform: translateY(0) scaleX(1);
+  transition: opacity .5s ease, transform .5s ease;
+  pointer-events:none;
+  z-index:-1;           
+}
+
+.raise:hover{
+  transform: translateY(-10px);      
+}
+
+.raise:hover::after{
+  opacity:1;                              
+  transform: translateY(3px) scaleX(1.3); 
+}
+.close {
+  color: #00aaff;
+  background: transparent;
+  border: 2px solid #00aaff;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.4s ease;
+}
+
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;                       
+  background: #00aaff; 
+  z-index: -1;
+  transition: transform 0.5s ease;
+}
+
+.close::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+
+.close::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
+
+.close:hover::before {
+  transform: translateX(0);
+}
+
+.close:hover::after {
+  transform: translateX(0);
+}
+
+.close:hover {
+  color: #ffffff;             
+}
+
+.hover-me{
+  position: relative;
+  border: 2px solid #00aaff;
+  background: linear-gradient(90deg, #00aaff 0 50%, transparent 50% 100%);
+  color: #00aaff;          
+  transition: background .4s ease, color .4s ease;
+  z-index: 0;
+}
+
+
+.hover-me::before{
+  content: attr(data-text);           
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;                        
+  clip-path: inset(0 50% 0 0);           
+  pointer-events: none;
+  z-index: 1;                         
+}
+
+.hover-me:hover{
+  background: #00aaff;
+  color: #ffffff;
+}
+.hover-me:hover::before{
+  opacity: 0;            
+  transition: opacity .3s ease;
+}
+.zoom{
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+.zoom:hover {
+  transform: scale(1.3);
+}
+.explore {
+  position: relative;
+  padding-right: 50px;
+  transition: transform 0.4s ease;
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+
+.explore:hover {
+  transform: scale(1.15);
+}
+
+
+.explore::after {
+  content: "\f061";                 
+  font-family: "Font Awesome 6 Free"; 
+  font-weight: 900;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px); 
+  opacity: 0;
+  font-size: 18px;
+  color: #00aaff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.explore:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.fancy {
+  position: relative;
+  border: 2px solid #00aaff;       
+   background: transparent;
+  color: #00aaff;
+  transition: border 0.4s ease;
+  z-index: 0;
+  overflow: visible;      
+  }
+
+.fancy::after {
+  content: "";
+  position: absolute;
+  top: -8px;                        
+  right: -8px;
+  left: -8px;
+  bottom: -8px;
+  border: 2px solid #00aaff; 
+  transition: opacity 0.4s ease;
+  z-index: -1;         
+  border-radius: 6px;               
+}
+
+.fancy:hover::after {
+  opacity: 0;
+}
+
+.fancy:hover {
+  border-color: #00aaff;
+  background: transparent;
+}
+.hover-round{
+  position: relative;
+  color: #ffffff; 
+  background: transparent;   
+  border: none; 
+  overflow: hidden;
+  cursor: pointer;
+  height: 56px;
+  min-width: 180px;
+  padding: 0 28px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 28px;
+  isolation: isolate;           
+}
+.hover-round::before{
+  content: "";
+  position: absolute;
+  left: 54px;           
+  top: 50%;
+  width: 56px; 
+  height: 56px;
+  background: #00aaff;
+  border-radius: 50%;  
+  transform: translateY(-50%);
+  z-index: -1;    
+  transition:
+    width .6s ease-in-out,
+    left .6s ease-in-out,
+    border-radius .6s ease-in-out;
+}
+
+.hover-round:hover::before{
+  left: 0;                        
+  width: 100%;                    
+  border-radius: 28px;            
+}
+.btn.angled-simple{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  min-width: 260px;
+  padding: 0 32px;
+  border: none;
+  background: transparent;
+  color: #fff;     
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.btn.angled-simple .left,
+.btn.angled-simple .right{
+  position: absolute;
+  pointer-events: none; 
+    transition: all 1s ease-in-out;
+}
+
+.btn.angled-simple .left{
+  height: 75%;
+  left: 0;
+  width: 70%;
+  top: 0;
+  background: #2ecc71;
+  z-index: -2;
+  clip-path: polygon(0 0, 90% 0, 80% 100%, 0 100%);
+
+}
+
+.btn.angled-simple .right{
+  height: 60%;
+  right: 0;
+  width: 60%;
+  bottom: 0;
+  background: #00aaff;
+  z-index: -1;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+.btn.angled-simple:hover .left {
+  width: 50%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background: #00aaff; 
+}
+
+.btn.angled-simple:hover .right {
+  width: 50%;
+  height: 100%;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+  background: #2ecc71; 
+}
