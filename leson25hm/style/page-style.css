@@ -1,0 +1,12 @@
+.nav .nav-link{ opacity:.9; }
+.nav .nav-link:hover{ opacity:1; text-decoration:underline; }
+
+/* CSS-бургер: скрыть меню на мобилке, показать по чекбоксу */
+#menu{ display:none; }
+#menu-toggle:checked + label + #menu{ display:block; }
+
+/* На ≥992px меню всегда видно; иконку прячем */
+@media (min-width: 992px){
+  #menu{ display:flex !important; }
+  #menu-toggle, label[for="menu-toggle"]{ display:none; }
+}
