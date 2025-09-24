@@ -1,0 +1,47 @@
+// Зробіть розрахунки і виведіть в консоль ось такі математичні операції
+// let result1 = (5 + 3) * 2 - 7;
+// let result2 = (10 / 2) ** 2;
+// let result3 = 2 * (4 + 3) - (8 / 2);
+// let result4 = (15 % 4) + 5;
+// let result5 = 3 - (2 ** 4);
+// Також свторіть 2 змінні і самостійно виведіть результат операцій +,-,*,/,%,**
+// let result6 = 12-5;
+// let result7 = 20+12;
+// let result8 = (5+7)*2;
+// let result9 = 20/5;
+// let result10 = 5%3;
+// let result11 =12**20;
+let firstNumber = 2;
+let secondeNumber = 3
+let theeNumber = 4;
+let fourNumber = 5; 
+let fiveNumber = 6;
+let sixNumber = 7;
+let sevenNumber = 8;
+let eightNumber = 9;
+let nineNumber = 10;
+let tenNumber = 15;
+let twoNumber = 12;
+let elevenNumber = 20;
+let result1 = (fourNumber  + secondeNumber) * firstNumber - sixNumber;
+console.log(`Operation result ${result1}`);
+let result2 = (nineNumber / firstNumber) ** firstNumber;
+console.log(`Operation result ${result2}`);
+let result3 = firstNumber * (theeNumber + secondeNumber) - (sevenNumber / firstNumber);
+console.log(`Operation result ${result3}`);
+let result4 = (tenNumber % theeNumber) + fourNumber;
+console.log(`Operation result ${result4}`);
+let result5 = secondeNumber - (twoNumber ** theeNumber);
+console.log(`Operation result ${result5}`);
+let result6 = twoNumber - fourNumber;
+console.log(`Operation result ${result6}`);
+let result7 = elevenNumber + twoNumber; 
+console.log(`Operation result ${result7}`);
+let result8 = (fourNumber + sevenNumber) * firstNumber;
+console.log(`Operation result ${result8}`);     
+let result9 = elevenNumber / fiveNumber;
+console.log(`Operation result ${result9}`);
+let result10 = fourNumber % secondeNumber;
+console.log(`Operation result ${result10}`);
+let result11 = twoNumber ** elevenNumber;
+console.log(`Operation result ${result11}`);
