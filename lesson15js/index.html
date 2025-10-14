@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 20px;
+            transition: all 0.3s ease;}
+        #task4 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        #task4 .box {
+            width: 80px;
+            height: 80px;
+            background-color: lightcoral;
+            margin: 5px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;}
+       #task4 .box:hover {
+            background-color: coral;
+            transform: scale(1.1);}
+    #restoreButton {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+        }
+    
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+    <p id="myText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, iusto!</p>
+    <button id="colorButton">
+        зменіть колір
+    </button>
+  <div id="square"></div>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <h2>
+    лічильник кліків
+    <button id="counterButton">+</button>
+    <p id="counterValue" style="font-size: 32px;">0</p>
+      </h2>
+<div id="task4">
+    <h2>натисні квадрат</h2>
+    <button id="restoreButton">
+         відновити 
+</button>
+<div id="container"> </div>
+</div>
+<section class="blockContainer">
+    <button class="button first"> first</button> 
+    <button class="button second"> second</button>
+<button class="button third"> third </button>
+</section>
+</body>
+</html>
