@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h2>selector your favorite color</h2>
+    <form id="colorForm">
+      <label>
+        <input type="radio" name="color" value="red" />
+        Red
+      </label>
+      <label>
+        <input type="radio" name="color" value="green" />
+        Green
+      </label>
+      <label>
+        <input type="radio" name="color" value="blue" />
+        Blue
+      </label>
+      <label>
+        <input type="radio" name="color" value="yellow" />
+        Yellow
+      </label>
+    </form>
+    <h2>Select your hobbies</h2>
+    <form ad="hobbyForm">
+      <label>
+        <input type="checkbox" name="hobby" value="Sport" />
+        Sport
+      </label>
+      <label>
+        <input type="checkbox" name="hobby" value="Music" />
+        Music
+      </label>
+      <label>
+        <input type="checkbox" name="hobby" value="travel" />
+        Travel
+      </label>
+      <label>
+        <input type="checkbox" name="hobby" value="Dance" />
+        Dance
+      </label>
+    </form>
+    <p id="selectedHobbies">Selected hobbies: none</p>
+    <h2>select a contry</h2>
+    <form id="countryForm">
+      <label for="contry"> Choose country: </label>
+      <select id="country">
+        <option value="">Select country</option>
+        <option value="Poland">Poland</option>
+        <option value="Japan">Japan</option>
+        <option value="Francia">Francia</option>
+        <option value="Ukraina">Ukraina</option>
+        <option value="USA">USA</option>
+      </select>
+    </form>
+    <div id="countryInfo" style="margin-bottom: 15px; font-size: 18px"></div>
+    <!-- 4 -->
+    <h2>Rate our service</h2>
+    <form id="ratingForm">
+      <label>
+        <input type="radio" name="rating" value="1" />
+        1
+      </label>
+      <label>
+        <input type="radio" name="rating" value="2" />
+        2
+      </label>
+      <label>
+        <input type="radio" name="rating" value="3" />
+        3
+      </label>
+      <label>
+        <input type="radio" name="rating" value="4" />
+        4
+      </label>
+      <label>
+        <input type="radio" name="rating" value="5" />
+        5
+      </label>
+    </form>
+    <p
+      id="ratingMessage"
+      style="font-size: 18px; margin-top: 15px; color: greenyellow"
+    ></p>
+  </body>
+</html>

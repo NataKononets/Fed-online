@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MenuPizza</title>
+    <script src="pizza.js"></script>
+  </head>
+  <body>
+    <h2>Pizza order</h2>
+
+    <form id="pizzaForm">
+      <label for="pizza">Pizza name:</label>
+      <select id="pizza">
+        <option value="">Select pizza</option>
+        <option value="Margherita">Margherita</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Veggie">Veggie</option>
+        <option value="Four Cheese">Four Cheese</option>
+      </select>
+
+      <fieldset>
+        <legend>Size</legend>
+        <label><input type="radio" name="size" value="small" /> Small</label>
+        <label
+          ><input type="radio" name="size" value="medium" /> Medium (+50)</label
+        >
+        <label
+          ><input type="radio" name="size" value="large" /> Large (+100)</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Extra toppings (+25 each)</legend>
+        <label
+          ><input type="checkbox" name="topping" value="Mushrooms" />
+          Mushrooms</label
+        >
+        <label
+          ><input type="checkbox" name="topping" value="Olives" /> Olives</label
+        >
+        <label
+          ><input type="checkbox" name="topping" value="Bacon" /> Bacon</label
+        >
+        <label
+          ><input type="checkbox" name="topping" value="Extra cheese" /> Extra
+          cheese</label
+        >
+      </fieldset>
+    </form>
+
+    <div id="breakdown"></div>
+    <p class="price">Total: <strong id="total">0</strong> $</p>
+  </body>
+</html>
