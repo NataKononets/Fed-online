@@ -11,7 +11,7 @@ window.onload = function () {
   box.style.lineHeight = "200px";
   box.style.fontWeight = "bold";
   box.style.transition = "backround-color 0.3s ease";
-  box.style.margin = "50 px auto";
+  box.style.margin = "50px auto";
   box.onmouseover = function () {
     box.style.backgroundColor = "lightcoral";
     box.textContent = "Ой!";
@@ -143,7 +143,6 @@ window.onload = function () {
   });
   document.body.appendChild(field);
 
-  // Об'єкт (квадрат)
   const player = document.createElement("div");
   Object.assign(player.style, {
     width: "40px",
@@ -157,14 +156,12 @@ window.onload = function () {
   });
   field.appendChild(player);
 
-  // Стан клавіш
   const pressed = new Set();
-  // Позиція і швидкість
+
   let x = 20,
     y = 20;
-  const speed = 220; // px/s
+  const speed = 220;
 
-  // Щоб сторінка не скролилася стрілками
   window.addEventListener("keydown", (e) => {
     if (
       ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)
@@ -172,15 +169,13 @@ window.onload = function () {
       e.preventDefault();
     }
   });
-
-  // Натискання — додаємо в set; Відпускання — прибираємо
+  о;
   document.addEventListener("keydown", (e) => pressed.add(e.key));
   document.addEventListener("keyup", (e) => pressed.delete(e.key));
 
-  // Ігровий цикл
   let prev = performance.now();
   function tick(now) {
-    const dt = (now - prev) / 1000; // у секундах
+    const dt = (now - prev) / 1000;
     prev = now;
 
     let vx = 0,
@@ -190,9 +185,8 @@ window.onload = function () {
     if (pressed.has("ArrowUp")) vy -= 1;
     if (pressed.has("ArrowDown")) vy += 1;
 
-    // Нормалізація діагоналі
     if (vx !== 0 && vy !== 0) {
-      const k = Math.SQRT1_2; // ~0.707
+      const k = Math.SQRT1_2;
       vx *= k;
       vy *= k;
     }
@@ -200,7 +194,6 @@ window.onload = function () {
     x += vx * speed * dt;
     y += vy * speed * dt;
 
-    // Межі поля
     const maxX = field.clientWidth - player.clientWidth;
     const maxY = field.clientHeight - player.clientHeight;
     x = Math.max(0, Math.min(maxX, x));
