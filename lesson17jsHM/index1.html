@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Конвертер валют</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 24px;
+      }
+      .row {
+        margin-bottom: 12px;
+      }
+      .error {
+        color: #c62828;
+        min-height: 1.2em;
+      }
+      .result {
+        font-size: 1.25rem;
+        min-height: 1.6em;
+      }
+      .is-invalid {
+        outline: 2px solid #c62828;
+      }
+    </style>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>Конвертер валют</h1>
+    <p>Введи <b>суму</b> і <b>курс</b>, потім натисни кнопку.</p>
+
+    <form id="fxForm" novalidate>
+      <div class="row">
+        <label for="amount">Сума:</label><br />
+        <input id="amount" type="text" placeholder="Напр., 100" />
+        <div id="amountErr" class="error"></div>
+      </div>
+
+      <div class="row">
+        <label for="rate">Курс:</label><br />
+        <input id="rate" type="text" placeholder="Напр., 4.25" />
+        <div id="rateErr" class="error"></div>
+      </div>
+
+      <button type="submit">Конвертувати</button>
+      <button type="button" id="clearBtn">Очистити</button>
+    </form>
+
+    <hr />
+
+    <div id="result" class="result"></div>
+    <div id="formErr" class="error"></div>
+  </body>
+</html>

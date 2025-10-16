@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 24px;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .todo-input {
+        flex: 1;
+        padding: 8px 10px;
+        font-size: 16px;
+      }
+      .btn {
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .btn-add {
+        background: #1976d2;
+        color: #fff;
+        border: none;
+      }
+      .btn-clear {
+        background: #eee;
+        color: #333;
+        border: 1px solid #ccc;
+      }
+      ul {
+        padding-left: 0;
+        list-style: none;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 8px 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+      .task-text {
+        flex: 1;
+        word-break: break-word;
+      }
+      .btn-del {
+        background: #e53935;
+        color: #fff;
+        border: none;
+        padding: 6px 10px;
+        cursor: pointer;
+      }
+      .error {
+        color: #c62828;
+        min-height: 1.2em;
+      }
+      .muted {
+        color: #666;
+        font-size: 14px;
+      }
+    </style>
+    <script src="main2.js"></script>
+  </head>
+  <body>
+    <h1>Динамічний список задач</h1>
+    <p class="muted">
+      Введи назву задачі та натисни «Додати» або клавішу Enter.
+    </p>
+
+    <div class="row">
+      <input
+        id="taskInput"
+        class="todo-input"
+        type="text"
+        placeholder="Наприклад: Купити молоко"
+      />
+      <button id="addBtn" class="btn btn-add" type="button">Додати</button>
+      <button id="clearBtn" class="btn btn-clear" type="button">
+        Очистити все
+      </button>
+    </div>
+
+    <div id="err" class="error"></div>
+
+    <ul id="taskList"></ul>
+
+    <p class="muted" id="emptyHint">Список порожній — додай першу задачу.</p>
+  </body>
+</html>
