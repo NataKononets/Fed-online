@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+
+</head>
+<body>
+<h1>Save & Show with session Storage</h1>
+<div class="row">
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button id="saveBtn">Save</button>
+    <button id="showBtn">Show</button>
+    <button id="clearBtn" title="Optional"> clear </button>
+</div>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, blanditiis!</p>
+<div id="output" aria-live="polite"></div>
+<div class="settings">
+    <h1>
+        Personalize your page
+    </h1>
+    <label>
+        Choose background color:
+        <input type="color" id="bgColor">
+    </label>
+    <br>
+    <label>Select font size:
+        <select id="fontSize">
+            <option value="18px">
+                18px
+            </option>
+               <option value="20px">
+                20px
+            </option> 
+              <option value="24px">
+                24px
+            </option>
+        </select>
+    </label>
+    <br>
+    <button id="saveSettingsBtn">
+save settings
+    </button>
+    <button id="resertBtn">
+reset settings
+    </button>
+</div>
+<div class="settings" style="margin-top:24px">
+  <h2>To-Do List (localStorage)</h2>
+
+  <div class="row" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <input id="todoInput" type="text" placeholder="Add a task" style="padding:8px;min-width:260px" />
+    <button id="addTodoBtn">Add </button>
+    <button id="clearAllBtn" title="Remove all saved tasks">
+        Clear All 
+    </button>
+  </div>
+
+  <ul id="todoList" style="margin-top:12px;padding-left:20px"></ul>
+</div>
+<div class="settings" style="margin-top:30px">
+  <h2>JSON Object Example</h2>
+
+  <button id="createJsonBtn">Create & Show JSON</button>
+  <button id="saveJsonBtn">Save JSON to localStorage</button>
+  <pre id="jsonOutput" style="background:#f9f9f9;padding:10px;border-radius:8px;text-align:left;"></pre>
+</div>
+</body>
+</html>
