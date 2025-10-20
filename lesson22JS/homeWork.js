@@ -38,7 +38,7 @@ window.onload = function() {
       if (typeof text !== "string") {
         reject("Error: Input must be a string!");
       } else {
-        console.log("Processing... please wait 2 seconds ⏳");
+        console.log("Processing... please wait 2 seconds ");
 
         setTimeout(() => {
           const result = text.toUpperCase();
