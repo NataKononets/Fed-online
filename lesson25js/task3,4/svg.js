@@ -49,7 +49,7 @@ window.onload = function () {
 
     svg.appendChild(rect);
 
-    document.getElementById("svgContainer").appendChild(svg);
+    document.getElementById("svgContainer2").appendChild(svg);
   }
 
   createSvgRectangle(200, 120, "lightblue", "navy", 4);

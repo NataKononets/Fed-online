@@ -4,11 +4,11 @@ window.onload = function () {
   canvas.style.border = "2px solid gray";
   canvas.style.display = "block";
   canvas.style.margin = "20px auto";
-  ctx.fillStyle = "rgba (255, 0, 0, 0.6)";
+  ctx.fillStyle = "rgba(255, 0, 0, 0.6)";
   ctx.fillRect(60, 40, 180, 120);
   ctx.fillStyle = "rgba (0, 180, 0, 0.6)";
   ctx.fillRect(140, 80, 210, 140);
-  ctx.fillStyle = "rgba (0, 80, 255, 0.6)";
+  ctx.fillStyle = "rgba(0, 80, 255, 0.6)";
   ctx.fillRect(240, 30, 160, 170);
   ctx.fillStyle = "black";
   ctx.font = "20px Arial";
@@ -25,7 +25,7 @@ window.onload = function () {
     gradient.addColorStop(0, color1);
     gradient.addColorStop(1, color2);
     ctx2.fillStyle = gradient;
-    ctx2.fillRect(0, 0, canvas.width, canvas.height);
+    ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
   }
   fillGradient("red", "blue");
 
